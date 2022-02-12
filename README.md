@@ -29,7 +29,7 @@ Add you public RSA keys to:
 Delete the 99-ssh-keys.sh file
 
 ```bash
-/mnt/data/on_boot.d/99-ssh-keys.sh
+rm -rf /mnt/data/on_boot.d/99-ssh-keys.sh
 ```
 
 Delete your authorized_keys file
