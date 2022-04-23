@@ -2,11 +2,7 @@
 
 ## Persistence on Reboot
 
-<<<<<<< HEAD
-This script need to run every time the system is rebooted since the __/root/.ssh/authorized_keys__ overwrites every boot.  
-=======
 This script need to run every time the system is rebooted since the **/root/.ssh/authorized_keys** overwrites every boot.  
->>>>>>> ee5db53 (update from bash to sh fo install)
 This can be accomplished with a boot script. Flow this guide: [UDM / UDMPro Boot Script](https://github.com/boostchicken-dev/udm-utilities/tree/master/on-boot-script)
 
 ## Compatibility
