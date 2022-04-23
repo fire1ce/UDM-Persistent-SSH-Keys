@@ -2,20 +2,24 @@
 
 ## Persistence on Reboot
 
+<<<<<<< HEAD
 This script need to run every time the system is rebooted since the __/root/.ssh/authorized_keys__ overwrites every boot.  
+=======
+This script need to run every time the system is rebooted since the **/root/.ssh/authorized_keys** overwrites every boot.  
+>>>>>>> ee5db53 (update from bash to sh fo install)
 This can be accomplished with a boot script. Flow this guide: [UDM / UDMPro Boot Script](https://github.com/boostchicken-dev/udm-utilities/tree/master/on-boot-script)
 
 ## Compatibility
 
-  * Tested on UDM PRO
-  * UDM Pro doesn't support __ed25519__ SSH Keys
+- Tested on UDM PRO
+- UDM Pro doesn't support **ed25519** SSH Keys
 
 ## Installation
 
 The script was tested on UDM PRO
 
 ```bash
-curl https://raw.githubusercontent.com/fire1ce/UDMP-Persistence-SSH-Keys/main/install.sh | bash 
+curl https://raw.githubusercontent.com/fire1ce/UDMP-Persistence-SSH-Keys/main/install.sh | sh
 ```
 
 Add you public RSA keys to:
@@ -40,7 +44,7 @@ rm -rf /mnt/data/ssh/authorized_keys
 
 ## Usage
 
-At boot the script with read the __/mnt/data/ssh/authorized_keys__ file and add the content to UDM's __/root/.ssh/authorized_keys__
+At boot the script with read the **/mnt/data/ssh/authorized_keys** file and add the content to UDM's **/root/.ssh/authorized_keys**
 
 Manual run:
 
