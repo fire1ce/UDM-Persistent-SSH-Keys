@@ -2,7 +2,7 @@
 
 user_authorized_keys_file="/mnt/data/ssh/authorized_keys"
 
-curl -O https://raw.githubusercontent.com/fire1ce/UDM-Persistent-SSH-Keys/main/install.sh
+curl -O https://raw.githubusercontent.com/fire1ce/UDM-Persistent-SSH-Keys/main/99-ssh-keys.sh
 mv 99-ssh-keys.sh /mnt/data/on_boot.d/99-ssh-keys.sh
 chmod +x /mnt/data/on_boot.d/99-ssh-keys.sh
 echo "99-ssh-keys.sh installed"
