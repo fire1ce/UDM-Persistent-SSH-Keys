@@ -3,7 +3,7 @@
 ## Persistence on Reboot
 
 This script need to run every time the system is rebooted since the **/root/.ssh/authorized_keys** overwrites every boot.  
-This can be accomplished with a boot script. Flow this guide: [UDM / UDMPro Boot Script](https://github.com/boostchicken-dev/udm-utilities/tree/master/on-boot-script)
+This can be accomplished with a boot script. Flow this guide: [UDM / UDMPro Boot Script](https://github.com/unifi-utilities/unifios-utilities/tree/main/on-boot-script)
 
 ## Compatibility
 
