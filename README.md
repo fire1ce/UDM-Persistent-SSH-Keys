@@ -7,7 +7,7 @@ This can be accomplished with a boot script. Flow this guide: [UDM / UDMPro Boot
 
 ## Compatibility
 
-- Tested on UDM PRO
+- Tested on [UDM PRO][amz-udm-pro-url]
 - UDM Pro doesn't support **ed25519** SSH Keys
 
 ## Installation
@@ -47,3 +47,9 @@ Manual run:
 ```shell
 /mnt/data/on_boot.d/99-ssh-keys.sh
 ```
+
+<!-- --- -->
+
+[amz-udm-pro-url]: https://amzn.to/3J4fezk 'Amazon Unifi UDM Pro'
+
+<!-- --- -->
