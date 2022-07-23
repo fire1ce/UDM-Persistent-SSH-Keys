@@ -14,13 +14,13 @@ This can be accomplished with a boot script. Flow this guide: [UDM / UDMPro Boot
 
 The script was tested on UDM PRO
 
-```bash
+```shell
 curl https://raw.githubusercontent.com/fire1ce/UDM-Persistent-SSH-Keys/main/install.sh | sh
 ```
 
 Add you public RSA keys to:
 
-```bash
+```shell
 /mnt/data/ssh/authorized_keys
 ```
 
@@ -28,13 +28,13 @@ Add you public RSA keys to:
 
 Delete the 99-ssh-keys.sh file
 
-```bash
+```shell
 rm -rf /mnt/data/on_boot.d/99-ssh-keys.sh
 ```
 
 Delete your authorized_keys file
 
-```bash
+```shell
 rm -rf /mnt/data/ssh/authorized_keys
 ```
 
@@ -44,6 +44,6 @@ At boot the script with read the **/mnt/data/ssh/authorized_keys** file and add 
 
 Manual run:
 
-```bash
+```shell
 /mnt/data/on_boot.d/99-ssh-keys.sh
 ```
