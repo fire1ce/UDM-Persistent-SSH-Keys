@@ -8,11 +8,11 @@ chmod +x /mnt/data/on_boot.d/99-ssh-keys.sh
 echo "99-ssh-keys.sh installed"
 
 if [ ! -f "$user_authorized_keys_file" ]; then
-  touch $user_authorized_keys_file
   echo "Creating $user_authorized_keys_file"
+  mkdir -p /mnt/data/ssh
+  touch "$user_authorized_keys_file"
+  chmod 0644 "$user_authorized_keys_file"
 fi
-
-chmod 0644 $user_authorized_keys_file
 
 echo "==> Add you public keys to $user_authorized_keys_file"
 echo "==> Done."
