@@ -15,7 +15,7 @@ This can be accomplished with a boot script. Flow this guide: [UDM / UDMPro Boot
 The script was tested on UDM PRO
 
 ```shell
-curl https://raw.githubusercontent.com/fire1ce/UDM-Persistent-SSH-Keys/main/install.sh | sh
+curl -s https://raw.githubusercontent.com/fire1ce/UDM-Persistent-SSH-Keys/main/install.sh | sh
 ```
 
 Add you public RSA keys to:
