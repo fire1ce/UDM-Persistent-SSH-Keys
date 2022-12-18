@@ -19,6 +19,7 @@ case "$(ubnt-device-info firmware || true)" in
   esac
 
 user_authorized_keys_file="$DATA_DIR/ssh/authorized_keys"
+udm_authorized_keys_file="/root/.ssh/authorized_keys"
 
 curl -sO https://raw.githubusercontent.com/fire1ce/UDM-Persistent-SSH-Keys/main/99-ssh-keys.sh
 mv 99-ssh-keys.sh $DATA_DIR/on_boot.d/99-ssh-keys.sh
@@ -28,8 +29,9 @@ echo "99-ssh-keys.sh installed"
 if [ ! -f "$user_authorized_keys_file" ]; then
   echo "Creating $user_authorized_keys_file"
   mkdir -p $DATA_DIR/ssh
-  touch "$user_authorized_keys_file"
-  chmod 0644 "$user_authorized_keys_file"
+  mkdir -p /root/.ssh/
+  touch "$user_authorized_keys_file $udm_authorized_keys_file"
+  chmod 0644 "$user_authorized_keys_file $udm_authorized_keys_file"
 fi
 
 echo "==> Add you public keys to $user_authorized_keys_file"
