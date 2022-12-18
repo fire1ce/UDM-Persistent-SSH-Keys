@@ -15,7 +15,7 @@ This can be accomplished with a boot script. Flow this guide: [UDM / UDMPro Boot
 
 The script was tested on UDM PRO
 
-(!) Depending on firmware your $DATA_DIR will be "/mnt/data" (Firmware 1.x) or "/data" (Firmware 2.x and 3.x)
+(!) Depending on firmware your `$DATA_DIR` will be `/mnt/data` (Firmware 1.x) or `/data` (Firmware 2.x and 3.x)
 
 ```shell
 curl -s https://raw.githubusercontent.com/fire1ce/UDM-Persistent-SSH-Keys/main/install.sh | sh
