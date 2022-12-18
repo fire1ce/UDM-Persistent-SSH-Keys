@@ -10,9 +10,12 @@ This can be accomplished with a boot script. Flow this guide: [UDM / UDMPro Boot
 - Tested on [UDM PRO][amz-udm-pro-url]
 - UDM Pro doesn't support **ed25519** SSH Keys
 
+
 ## Installation
 
 The script was tested on UDM PRO
+
+(!) Depending on firmware your $DATA_DIR will be "/mnt/data" (Firmware 1.x) or "/data" (Firmware 2.x and 3.x)
 
 ```shell
 curl -s https://raw.githubusercontent.com/fire1ce/UDM-Persistent-SSH-Keys/main/install.sh | sh
@@ -21,7 +24,7 @@ curl -s https://raw.githubusercontent.com/fire1ce/UDM-Persistent-SSH-Keys/main/i
 Add you public RSA keys to:
 
 ```shell
-/mnt/data/ssh/authorized_keys
+$DATA_DIR/ssh/authorized_keys
 ```
 
 ## Uninstall
@@ -29,23 +32,23 @@ Add you public RSA keys to:
 Delete the 99-ssh-keys.sh file
 
 ```shell
-rm -rf /mnt/data/on_boot.d/99-ssh-keys.sh
+rm -rf $DATA_DIR/on_boot.d/99-ssh-keys.sh
 ```
 
 Delete your authorized_keys file
 
 ```shell
-rm -rf /mnt/data/ssh/authorized_keys
+rm -rf $DATA_DIR/ssh/authorized_keys
 ```
 
 ## Usage
 
-At boot the script with read the **/mnt/data/ssh/authorized_keys** file and add the content to UDM's **/root/.ssh/authorized_keys**
+At boot the script with read the **$DATA_DIR/ssh/authorized_keys** file and add the content to UDM's **/root/.ssh/authorized_keys**
 
 Manual run:
 
 ```shell
-/mnt/data/on_boot.d/99-ssh-keys.sh
+$DATA_DIR/on_boot.d/99-ssh-keys.sh
 ```
 
 <!-- --- -->
