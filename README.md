@@ -1,5 +1,9 @@
 # UDM Persistence SSH Keys
 
+## Changelog
+
+- 2023-02-22 - Fixed support for UDM Pro Firmware 1.x and 2.x and 3.x - Must reinstall the script after upgrade from 1.x to 2.x
+
 ## Persistence on Reboot
 
 This script need to run every time the system is rebooted since the **/root/.ssh/authorized_keys** overwrites every boot.  
@@ -9,7 +13,6 @@ This can be accomplished with a boot script. Flow this guide: [UDM / UDMPro Boot
 
 - Tested on [UDM PRO][amz-udm-pro-url]
 - UDM Pro doesn't support **ed25519** SSH Keys
-
 
 ## Installation
 
