@@ -28,9 +28,9 @@ if [ ! -f "$user_authorized_keys_file" ]; then
 fi
 
 # Reads the user file line by line and adds the key to the authorized_keys file
-file=$user_authorized_keys_file
+mkdir -p "$(dirname ${udm_authorized_keys_file})"
 while IFS= read -r line || [ -n "$line" ]; do
   echo $line >>$udm_authorized_keys_file
-done <"$file"
+done <"$user_authorized_keys_file"
 
 exit 0
