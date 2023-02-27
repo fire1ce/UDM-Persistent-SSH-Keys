@@ -27,10 +27,7 @@ if [ ! -f "$user_authorized_keys_file" ]; then
   exit 1
 fi
 
-# Reads the user file line by line and adds the key to the authorized_keys file
-file=$user_authorized_keys_file
-while IFS= read -r line || [ -n "$line" ]; do
-  echo $line >$udm_authorized_keys_file
-done <"$file"
+# Overwrite /root/.ssh/authorized_keys with $DATA_DIR/ssh/authorized_keys
+echo "$(cat "$user_authorized_keys_file")" >"$udm_authorized_keys_file"
 
 exit 0
